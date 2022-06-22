@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="text_size_xbig">40sp</dimen>
+    <dimen name="button_text_size_big">25sp</dimen>
+    <dimen name="button_margin_size_xbig">60dp</dimen>
+    <dimen name="layout_margin_size_xbig">40dp</dimen>
+    <dimen name="text_margin_size_xbig">10dp</dimen>
+    <dimen name="button_corner_size_xbig">30dp</dimen>
+    <dimen name="button_padding_horizontal_xbig">30dp</dimen>
+    <dimen name="button_padding_vertical_xbig">20dp</dimen>
+</resources>
