@@ -1,4 +1,4 @@
-package com.example.poclivedataflows.utils
+package com.example.poclivedataflows
 
 import android.app.Application
 import com.example.poclivedataflows.di.viewModelModule

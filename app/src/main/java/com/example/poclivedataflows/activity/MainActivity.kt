@@ -1,8 +1,9 @@
-package com.example.poclivedataflows
+package com.example.poclivedataflows.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.poclivedataflows.viewmodel.MainViewModel
 import com.example.poclivedataflows.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.collectLatest
@@ -25,10 +26,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnLiveData.setOnClickListener {
             viewModel.triggerLiveData()
         }
+
         //State Flow
         binding.btnStateFlow.setOnClickListener {
             viewModel.triggerStateFlow()
         }
+
         //Flow
         binding.btnFlow.setOnClickListener {
             lifecycleScope.launch {
@@ -37,14 +40,18 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
         //Shared Flow
         binding.btnSharedFlow.setOnClickListener {
             viewModel.triggerSharedFlow()
         }
+
         subscribeToObservable()
     }
+
     /**
-     * When the Activity rotates or when it changes to dark mode the observers will be notified automatically.
+     * When the Activity rotates or when it changes to dark mode, I mean when any configuration change happened,
+     * the observers will be notified automatically.
      */
     private fun subscribeToObservable() {
         /**
@@ -53,9 +60,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.liveData.observe(this) {
             binding.tvLiveData.text = it
         }
+
         /**
          * Uncomment the SnackBar to be able to see the difference between state flow and shared flow.
-         * Don't forget to comment on the text assignment.
          */
         lifecycleScope.launchWhenStarted {
             viewModel.stateFlow.collectLatest {
@@ -69,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                 */
             }
         }
+
         /**
          * The changes generated in the ViewModel will activate the observer and we can see the SnackBar
          */
@@ -81,6 +89,5 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
         }
-
     }
 }

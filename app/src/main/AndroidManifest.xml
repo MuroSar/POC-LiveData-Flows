@@ -3,7 +3,7 @@
     package="com.example.poclivedataflows">
 
     <application
-        android:name="com.example.poclivedataflows.utils.PocLiveDataFlowsApp"
+        android:name="com.example.poclivedataflows.PocLiveDataFlowsApp"
         android:allowBackup="true"
         android:icon="@mipmap/icon_round"
         android:label="@string/app_name"
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PocLiveDataFlows">
         <activity
-            android:name="com.example.poclivedataflows.MainActivity"
+            android:name="com.example.poclivedataflows.activity.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.PocLiveDataFlows.NoActionBar">

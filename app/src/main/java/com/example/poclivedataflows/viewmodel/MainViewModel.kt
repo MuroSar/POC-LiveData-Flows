@@ -1,4 +1,4 @@
-package com.example.poclivedataflows
+package com.example.poclivedataflows.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 class MainViewModel : ViewModel() {
     /**
      * Creating an instance
-     * Flow is not created as in the same way
+     * Flow is not created as in the same way than the others
      */
     private val _liveData = MutableLiveData("Hello World")
     val liveData: LiveData<String> = _liveData
