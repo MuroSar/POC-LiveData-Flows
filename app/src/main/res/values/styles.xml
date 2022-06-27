@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle">
+        <item name="android:textSize">@dimen/text_size_xbig</item>
+        <item name="fontStyle">italic</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">@dimen/text_margin_size_xbig</item>
+    </style>
+
+    <style name="ButtonMainStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/button_text_size_big</item>
+        <item name="android:layout_marginHorizontal">@dimen/button_margin_size_xbig</item>
+        <item name="cornerRadius">@dimen/button_corner_size_xbig</item>
+        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal_xbig</item>
+        <item name="android:paddingVertical">@dimen/button_padding_vertical_xbig</item>
+        <item name="android:state_pressed">true</item>
+    </style>
+</resources>
